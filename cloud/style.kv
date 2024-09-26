@@ -10,25 +10,31 @@
             size_hint: 0.9, 0.4
             pos_hint: {'center_x': 0.5}
             MDTextField:
-                hint_text: "Введiть мiсто"
+                id: city
+                hint_text: "Input your city"
                 mode: "fill"
                 
             MDIconButton:
+                id: search_btn
+                on_press: root.search()
                 icon: "search-web"
                 icon_size: "32sp"
                 mb_bg_color: app.theme_cls.primary_color
-        
-        MDLabel:
-            text: "14*C"
-            font_style: "Нi"
-            halign: "center"
+        MDBoxLayout:
+            orientation: 'vertical'
+            pos_hint: {'center_x': 0.5}
+            size_hint: 0.9, 0.4
+            MDLabel:
+                id: temp
+                text: "14C"
+                font_style: "H4"
+                halign: "center"
 
-        MDLabel:
-            text: "Ясно"
-            font_style: "H4"
-            halign: "center"
+            MDLabel:
+                id: desc
+                text: "Ясно"
+                font_style: "H4"
+                halign: "center"
 
-        MDLabel:
-            text: "Ясно"
 
             
